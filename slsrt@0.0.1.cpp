@@ -16,7 +16,6 @@ bool input(float * &elements, unsigned int num)
         std::istringstream stream(str);
         for (unsigned int j = 0; j < num; ++j) {
             if(!(stream >> tmp_elements[j])) {
-                stream.setstate(std::ios::failbit);
                 return false;
             }
         }
